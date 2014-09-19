@@ -11,7 +11,12 @@ Template.postSubmit.events = {
 			message: form.find("[name=message]").val()
 		};
 
-		post._id = Posts.insert(post);
+		Meteor.call('post', post, function(error, id) {
+	      if (error)
+	        return alert(error.reason);
+
+	      Router.go('postPage', {_id: id});
+	    });
 
 		Router.go("postPage", post);
 
