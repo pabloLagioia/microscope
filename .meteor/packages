@@ -4,11 +4,9 @@
 # but you can also edit it by hand.
 
 meteor-platform
-insecure
 bootstrap
 iron:router
 spin
 sacha:spin
 accounts-password
 mrt:accounts-ui-bootstrap-dropdown
-
